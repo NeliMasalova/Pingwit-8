@@ -1,7 +1,7 @@
 package pl.pingwit.lec_2;
 
 
-public class WrappersExample_task1 {
+public class Task1_Wrappers {
 
         public static void main(String[]args){
             System.out.println("Byte:");
