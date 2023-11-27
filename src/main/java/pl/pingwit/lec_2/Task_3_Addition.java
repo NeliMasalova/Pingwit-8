@@ -1,6 +1,6 @@
 package pl.pingwit.lec_2;
 
-public class Task3_addition {
+public class Task_3_Addition {
     public static void main(String[] args) {
         /*int myInt = 1993;
         int mySecondInt = 2020;
@@ -10,11 +10,10 @@ public class Task3_addition {
         int myInt = 1993;
         int mySecondInt = 2020;
         mySecondInt += myInt;
-            System.out.println("TheSum= " + mySecondInt);
+        System.out.println("TheSum= " + mySecondInt);
 
         /*int myInt = 1993;
         int mySecondInt = ++myInt;
             System.out.println("mySecondInt= " + mySecondInt);*/
-
     }
 }
