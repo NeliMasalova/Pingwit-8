@@ -2,7 +2,7 @@ package pl.pingwit.lec_4;
 
 import java.util.Scanner;
 
-public class CurrencyExchangeConverter {
+public class Task_1_CurrencyExchangeConverter {
 
     public static final double EXCHANGERATEUAH = 39.65;
     public static final double EXCHANGERATESEURO = 0.02518;
@@ -13,7 +13,6 @@ public class CurrencyExchangeConverter {
         int currency = scanner.nextInt();
         System.out.println("Please, enter the sum:");
         int sum = scanner.nextInt();
-
 
         switch (currency) {
             case 1:
@@ -33,6 +32,5 @@ public class CurrencyExchangeConverter {
                 message = "Your currency is not available.";
                 System.out.println(message);
         }
-
     }
 }
