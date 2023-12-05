@@ -4,6 +4,8 @@ public class Task_8_TheSumsOfNumbers {
         int sumOddNumbers = 0;
         int sumEvenNumbers = 0;
         int sumAllNumbers = 0;
+
+        //а теперь давай эти 3 цикла заменим одним и сразу все посчитаем. Тебе понадобится if() и оператор %
         for (int evenNumber = 0; evenNumber <= 100; evenNumber = evenNumber + 2) {
             sumEvenNumbers += evenNumber;
         }
