@@ -2,15 +2,12 @@ package pl.pingwit.lec_3;
 
 public class Task_1_Trainings {
     public static void main(String[] args) {
-        /* ты эту переменную используешь как хранилище дистанции для каждого дня, поэтому theFirstDayWay название не подойдет.  
-        theFirstDayWay -> dailyDistance может так?
-        */
-        double theFirstDayWay = 10.0;
-        double totalWay = theFirstDayWay;
+        double dailyDistance = 10.0;
+        double totalWay = dailyDistance;
         for (double dayNumber = 2; dayNumber <= 7; dayNumber++) {
-            theFirstDayWay = (theFirstDayWay * 0.1 + theFirstDayWay);
-            totalWay += theFirstDayWay;
+            dailyDistance = (dailyDistance * 0.1 + dailyDistance);
+            totalWay += dailyDistance;
         }
-        System.out.println("The total training way is " + totalWay + " kilometres."); // kilometres -> kilometers, обе формы верные, здесь скорее общепринятая форма вторая
+        System.out.println("The total training way is " + totalWay + " kilometers.");
     }
 }

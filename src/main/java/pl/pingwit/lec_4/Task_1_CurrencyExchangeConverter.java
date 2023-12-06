@@ -4,33 +4,33 @@ import java.util.Scanner;
 
 public class Task_1_CurrencyExchangeConverter {
 
-    public static final double EXCHANGERATEUAH = 39.65; // если в константе несколько слов, то через _ -> EXCHANGE_RATE_UAH
-    public static final double EXCHANGERATESEURO = 0.02518; // если в константе несколько слов, то через _
+    public static final double EXCHANGE_RATE_UAH = 39.65;
+    public static final double EXCHANGE_RATE_EURO = 0.02518;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please, choose the currency. If you want euro - enter 1. If you want uah - enter 2."); // названия валют лучше большими буквами всегда
+        System.out.println("Please, choose the currency. If you want EURO - enter 1. If you want UAH - enter 2.");
         int currency = scanner.nextInt();
         System.out.println("Please, enter the sum:");
-        int sum = scanner.nextInt(); // sum это обычно результат сложения, давай переименуем в amount
+        int amount = scanner.nextInt();
 
-        switch (currency) { // попробуй заменить на более современный switch
+       switch (currency) { // попробуй заменить на более современный switch
             case 1:
-                double euro = EXCHANGERATEUAH; // эту строку удаляем
-                double totalSumInUah = euro * sum; // totalSumInUah = EXCHANGERATEUAH * sum;
+                double totalSumInUah = EXCHANGE_RATE_UAH * amount;
                 System.out.println("Amount of money to be issued: " + totalSumInUah + ".");
                 break;
-// эта строка не нужна, удаляем
             case 2:
-                double uah = EXCHANGERATESEURO;
-                double totalSumInEuro = uah * sum;
+                double totalSumInEuro = EXCHANGE_RATE_EURO * amount;
                 System.out.println("Amount of money to be issued: " + totalSumInEuro + ".");
                 break;
-// эта строка не нужна, удаляем
             default:
-                String message = null; // эту и строку ниже можно объеденить, либо еще проще в System.out.println() вывести сообщение
-                message = "Your currency is not available.";
-                System.out.println(message);
+                System.out.println("Your currency is not available.");
         }
+        /* switch (currency) {
+            case 1 -> double totalSumInUah = EXCHANGE_RATE_UAH * amount;
+            System.out.println("Amount of money to be issued: + totalSumInUah.");
+            case 2 -> double totalSumInEuro = EXCHANGE_RATE_EURO * amount;
+            System.out.println("Amount of money to be issued: " + totalSumInEuro + ".");
+            default -> System.out.println("Your currency is not available.");
+        }*/
     }
-}

@@ -1,4 +1,5 @@
 package pl.pingwit.lec_3;
+
 public class Task_8_TheSumsOfNumbers {
     public static void main(String[] args) {
         int sumOddNumbers = 0;
@@ -6,17 +7,19 @@ public class Task_8_TheSumsOfNumbers {
         int sumAllNumbers = 0;
 
         //а теперь давай эти 3 цикла заменим одним и сразу все посчитаем. Тебе понадобится if() и оператор %
-        for (int evenNumber = 0; evenNumber <= 100; evenNumber = evenNumber + 2) {
-            sumEvenNumbers += evenNumber;
+        for (int i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                sumEvenNumbers += i;
+            }
+            if (i % 2 != 0) {
+                sumOddNumbers += i;
+            }
+            if (i % 1 == 0) {
+                sumAllNumbers += i;
+            }
         }
-        for (int oddNumber = 1; oddNumber < 100; oddNumber = oddNumber + 2) {
-            sumOddNumbers += oddNumber;
-        }
-        for (int number = 0; number <= 100; ++number) {
-            sumAllNumbers += number;
-        }
-        System.out.println("The sum of odd numbers is " + sumOddNumbers + ".");
-        System.out.println("The sum of even numbers is " + sumEvenNumbers + ".");
+        System.out.println("The sum of odd numbers is " + sumEvenNumbers + ".");
+        System.out.println("The sum of even numbers is " + sumOddNumbers + ".");
         System.out.println("The total sum of all numbers is " + sumAllNumbers + ".");
     }
 }
