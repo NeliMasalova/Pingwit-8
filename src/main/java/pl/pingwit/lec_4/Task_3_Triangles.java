@@ -10,5 +10,7 @@ public class Task_4_Butterfly {
             }
             System.out.println();
         }
+
+        // давай уже и второй треугольник дорисуем
     }
 }
