@@ -34,3 +34,5 @@ public class Task_1_CurrencyExchangeConverter {
             default -> System.out.println("Your currency is not available.");
         }*/
     }
+    // мне кажется или здесь не хватает еще одной "}" ? 
+// Не пуш в репозиторий код, который не компилируется, лучше законмменируй его польностью. На след занятии покажу как еще можно делать
