@@ -14,23 +14,16 @@ public class Task_1_CurrencyExchangeConverter {
         System.out.println("Please, enter the sum:");
         int amount = scanner.nextInt();
 
-       switch (currency) { // попробуй заменить на более современный switch
-            case 1:
-                double totalSumInUah = EXCHANGE_RATE_UAH * amount;
-                System.out.println("Amount of money to be issued: " + totalSumInUah + ".");
-                break;
-            case 2:
-                double totalSumInEuro = EXCHANGE_RATE_EURO * amount;
-                System.out.println("Amount of money to be issued: " + totalSumInEuro + ".");
-                break;
-            default:
-                System.out.println("Your currency is not available.");
-        }
-        /* switch (currency) {
-            case 1 -> double totalSumInUah = EXCHANGE_RATE_UAH * amount;
-            System.out.println("Amount of money to be issued: + totalSumInUah.");
-            case 2 -> double totalSumInEuro = EXCHANGE_RATE_EURO * amount;
-            System.out.println("Amount of money to be issued: " + totalSumInEuro + ".");
+        double totalSumInUah = EXCHANGE_RATE_UAH * amount;
+        double totalSumInEuro = EXCHANGE_RATE_EURO * amount;
+        switch (currency) {
+            case 1 -> {
+                System.out.println("Amount of money to be issued:" + totalSumInUah + " UAH.");
+            }
+            case 2 -> {
+                System.out.println("Amount of money to be issued: " + totalSumInEuro + " EURO.");
+            }
             default -> System.out.println("Your currency is not available.");
-        }*/
+        }
     }
+}
