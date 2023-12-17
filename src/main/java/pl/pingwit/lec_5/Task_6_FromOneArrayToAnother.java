@@ -3,7 +3,7 @@ package pl.pingwit.lec_5;
 import java.util.Arrays;
 
 //Есть массив чисел. Необходимо создать другой массив содержащий только четные элементы из первого
-public class Task_6 {
+public class Task_6_FromOneArrayToAnother {
     public static void main(String[] args) {
         int[] myIntArray = {1, 12, 2, 63, 95, 44, 74, 110, 2450};
         int[] secondIntArray = new int[myIntArray.length];
