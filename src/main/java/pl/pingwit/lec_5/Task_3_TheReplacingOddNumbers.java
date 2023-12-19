@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Task_3_TheReplacingOddNumbers {
     public static void main(String[] args) {
-        int[] myIntArray = {7, 15, 23, 44, 82, 91};
+        int[] myIntArray = {15, 35, 78, 96, 13, 44, 22, 30, 900};
         for (int i = 0; i < myIntArray.length; i++) {
             if (myIntArray[i] % 2 != 0) {
                 myIntArray[i] = 0;

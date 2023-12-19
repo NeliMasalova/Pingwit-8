@@ -4,11 +4,12 @@ import java.util.Arrays;
 
 public class Task_5_InvertedArray {
     public static void main(String[] args) {
-        int[] myIntArray = {0, 1, 2, 3, 4};
-        int[] inverseArray = new int[myIntArray.length];
-        for (int i = 0; i < myIntArray.length; i++) {
-            inverseArray[i] = myIntArray[myIntArray.length - i - 1];
+        int[] myIntArray = {};
+        for (int i = 0; i < myIntArray.length / 2; i++) {
+            int temp = myIntArray[i];
+            myIntArray[i] = myIntArray[myIntArray.length - i - 1];
+            myIntArray[myIntArray.length - i - 1] = temp;
         }
-        System.out.println(Arrays.toString(inverseArray));
+        System.out.println(Arrays.toString(myIntArray));
     }
 }
