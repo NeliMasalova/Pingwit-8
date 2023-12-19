@@ -14,15 +14,14 @@ public class Task_1_TheUserArray {
         int min = myIntArray[0];
         int max = myIntArray[0];
         int sum = 0;
-        for (int i = 0; i < myIntArray.length; i++) {
-            sum += myIntArray[i];
-            if (myIntArray[i] < min) {
-                min = myIntArray[i];
+        for (int j : myIntArray) {
+            sum += j;
+            if (j < min) {
+                min = j;
             }
-            if (myIntArray[i] > max) {
-                max = myIntArray[i];
+            if (j > max) {
+                max = j;
             }
-
         }
 
         System.out.println("The sum of numbers in your array is " + sum + ".");
