@@ -1,8 +1,8 @@
 package pl.pingwit.lec_6.Task_2_ParkingSystem;
 
 public class CarInfo {
-    private String vehicleRegistrationNumber;
-    private CarOwnerInformation carOwnerInformation;
+    private String vehicleRegistrationNumber; // vehicleRegistrationNumber -> registrationNumber. Твой вариант хороший, но слишком длинный + это поле находится в классе автомобиля, поэтому vehicle избыточно
+    private CarOwnerInformation carOwnerInformation; // carOwnerInformation -> ownerInformation
 
     public String getVehicleRegistrationNumber() {
         return vehicleRegistrationNumber;
@@ -28,6 +28,7 @@ public class CarInfo {
                 '}';
     }
 
+    // конструктор в классе идет перед другими методами, в твоем случае перед getVehicleRegistrationNumber
     public CarInfo(String vehicleRegistrationNumber, CarOwnerInformation carOwnerInformation) {
         this.vehicleRegistrationNumber = vehicleRegistrationNumber;
         this.carOwnerInformation = carOwnerInformation;
