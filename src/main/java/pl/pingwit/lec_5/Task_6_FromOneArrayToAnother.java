@@ -11,6 +11,7 @@ public class Task_6_FromOneArrayToAnother {
                 evenNumbersArray[i] = myIntArray[i];
             }
         }
+        // а 3ий финальный массив?
         System.out.println(Arrays.toString(evenNumbersArray));
     }
 }
