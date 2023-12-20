@@ -2,7 +2,6 @@ package pl.pingwit.lec_6;
 
 import java.util.Arrays;
 
-// эта задача вроде к лекции 5 относится
 public class Task_1_Bubble {
     public static void main(String[] args) {
         int[] myIntArray = {5, 19, 22, -4, 1023, 7, 1993, -52, 98};
