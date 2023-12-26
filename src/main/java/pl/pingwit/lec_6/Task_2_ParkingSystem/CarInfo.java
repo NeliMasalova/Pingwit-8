@@ -1,36 +1,35 @@
 package pl.pingwit.lec_6.Task_2_ParkingSystem;
 
 public class CarInfo {
-    private String vehicleRegistrationNumber; // vehicleRegistrationNumber -> registrationNumber. Твой вариант хороший, но слишком длинный + это поле находится в классе автомобиля, поэтому vehicle избыточно
-    private CarOwnerInformation carOwnerInformation; // carOwnerInformation -> ownerInformation
+    private String registrationNumber;
+    private OwnerInformation ownerInformation;
 
-    public String getVehicleRegistrationNumber() {
-        return vehicleRegistrationNumber;
+    public CarInfo(String registrationNumber, OwnerInformation ownerInformation) {
+        this.registrationNumber = registrationNumber;
+        this.ownerInformation = ownerInformation;
     }
 
-    public void setVehicleRegistrationNumber(String vehicleRegistrationNumber) {
-        this.vehicleRegistrationNumber = vehicleRegistrationNumber;
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public CarOwnerInformation getCarOwnerInformation() {
-        return carOwnerInformation;
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
-    public void setCarOwnerInformation(CarOwnerInformation carOwnerInformation) {
-        this.carOwnerInformation = carOwnerInformation;
+    public OwnerInformation getOwnerInformation() {
+        return ownerInformation;
+    }
+
+    public void setOwnerInformation(OwnerInformation ownerInformation) {
+        this.ownerInformation = ownerInformation;
     }
 
     @Override
     public String toString() {
         return "CarInfo{" +
-                "vehicleRegistrationNumber='" + vehicleRegistrationNumber + '\'' +
-                ", carOwnerInformation=" + carOwnerInformation +
+                "registrationNumber='" + registrationNumber + '\'' +
+                ", ownerInformation=" + ownerInformation +
                 '}';
-    }
-
-    // конструктор в классе идет перед другими методами, в твоем случае перед getVehicleRegistrationNumber
-    public CarInfo(String vehicleRegistrationNumber, CarOwnerInformation carOwnerInformation) {
-        this.vehicleRegistrationNumber = vehicleRegistrationNumber;
-        this.carOwnerInformation = carOwnerInformation;
     }
 }

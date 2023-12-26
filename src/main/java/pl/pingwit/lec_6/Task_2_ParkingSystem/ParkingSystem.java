@@ -2,52 +2,45 @@ package pl.pingwit.lec_6.Task_2_ParkingSystem;
 
 public class ParkingSystem {
     public static void main(String[] args) {
-        CarOwnerInformation carOwnerInformation1 = new CarOwnerInformation(); // carOwnerInformation1 уходим от таких названий переменных, можно назвать robert или robertSaniewski
-        carOwnerInformation1.setCarOwnerName("Robert");
-        carOwnerInformation1.setCarOwnerSurname("Saniewski"); // Lewandowski
-        carOwnerInformation1.setCarOwnerTelephone("508212130");
-        carOwnerInformation1.setCarOwnerEmailAddress("r.saniewski@gmail.com");
+        OwnerInformation robertLewandowski = new OwnerInformation();
+        robertLewandowski.setName("Robert");
+        robertLewandowski.setSurname("Lewandowski");
+        robertLewandowski.setPhone("508212130");
+        robertLewandowski.setEmail("r.lewandowski@gmail.com");
 
-        CarOwnerInformation carOwnerInformation2 = new CarOwnerInformation(); // carOwnerInformation2 как в примере выше
-        carOwnerInformation2.setCarOwnerName("Barbara");
-        carOwnerInformation2.setCarOwnerSurname("Smith");
-        carOwnerInformation2.setCarOwnerTelephone("578930130");
-        carOwnerInformation2.setCarOwnerEmailAddress("basiakownacka@gmail.com");
+        OwnerInformation barbaraSmith = new OwnerInformation();
+        barbaraSmith.setName("Barbara");
+        barbaraSmith.setSurname("Smith");
+        barbaraSmith.setPhone("578930130");
+        barbaraSmith.setEmail("basiakownacka@gmail.com");
 
-        CarOwnerInformation carOwnerInformation3 = new CarOwnerInformation(); // carOwnerInformation3 как в примере выше
-        carOwnerInformation3.setCarOwnerName("Maria");
-        carOwnerInformation3.setCarOwnerSurname("Ivanovskaya");
-        carOwnerInformation3.setCarOwnerTelephone("558963326");
-        carOwnerInformation3.setCarOwnerEmailAddress("ivanovska.mary@gmail.com");
+        OwnerInformation mariaIvanovskaya = new OwnerInformation();
+        mariaIvanovskaya.setName("Maria");
+        mariaIvanovskaya.setSurname("Ivanovskaya");
+        mariaIvanovskaya.setPhone("558963326");
+        mariaIvanovskaya.setEmail("ivanovska.mary@gmail.com");
 
-        CarOwnerInformation carOwnerInformation4 = new CarOwnerInformation(); // carOwnerInformation4 как в примере выше
-        carOwnerInformation4.setCarOwnerName("Adam");
-        carOwnerInformation4.setCarOwnerSurname("Fisher");
-        carOwnerInformation4.setCarOwnerTelephone("123478965");
-        carOwnerInformation4.setCarOwnerEmailAddress("adam.fisher@gmail.com");
+        OwnerInformation adamFisher = new OwnerInformation();
+        adamFisher.setName("Adam");
+        adamFisher.setSurname("Fisher");
+        adamFisher.setPhone("123478965");
+        adamFisher.setEmail("adam.fisher@gmail.com");
 
-        CarOwnerInformation carOwnerInformation5 = new CarOwnerInformation(); // carOwnerInformation5 как в примере выше
-        carOwnerInformation5.setCarOwnerName("Anna");
-        carOwnerInformation5.setCarOwnerSurname("Kowalska");
-        carOwnerInformation5.setCarOwnerTelephone("555623147");
-        carOwnerInformation5.setCarOwnerEmailAddress("annuszka1987@gmail.com");
+        OwnerInformation annaKowalska = new OwnerInformation();
+        annaKowalska.setName("Anna");
+        annaKowalska.setSurname("Kowalska");
+        annaKowalska.setPhone("555623147");
+        annaKowalska.setEmail("annuszka1987@gmail.com");
 
-        CarInfo theFirstCar = new CarInfo("BIA-7978", carOwnerInformation1); // например, robertCar, можно добавить марку, тогда использовать toyta, но только не нумерование
-        CarInfo theSecondCar = new CarInfo("BI-32756", carOwnerInformation2);
-        CarInfo theThirstCar = new CarInfo("NEL-31347", carOwnerInformation3);
-        CarInfo theFourthCar = new CarInfo("WWA - 47236", carOwnerInformation4);
-        CarInfo theFifthCar = new CarInfo("BIA-1902", carOwnerInformation5);
+        CarInfo landRoverDiscovery = new CarInfo("BIA-7978", robertLewandowski);
+        CarInfo toyotaTundra = new CarInfo("BI-32756", barbaraSmith);
+        CarInfo opelCorsa = new CarInfo("NEL-31347", mariaIvanovskaya);
+        CarInfo toyotaPrius = new CarInfo("WWA-47236", adamFisher);
+        CarInfo mazdaRX8 = new CarInfo("BIA-1902", annaKowalska);
 
-        String carInfoString1 = theFirstCar.toString();  // все эти переменные не нужны
-        String carInfoString2 = theSecondCar.toString();
-        String carInfoString3 = theThirstCar.toString();
-        String carInfoString4 = theFourthCar.toString();
-        String carInfoString5 = theFifthCar.toString();
-
-        String[] carInfoArray = {carInfoString1, carInfoString2, carInfoString3, carInfoString4, carInfoString5}; // String[] carInfoArray -> CarInfo[] cars. 
-        //Массив можно создавать какого угодно типа, даже придуманного тобой
-        for (String s : carInfoArray) {
-            System.out.println(s);
+        CarInfo[] cars = {landRoverDiscovery, toyotaTundra, opelCorsa, toyotaPrius, mazdaRX8};
+        for (CarInfo car : cars) {
+            System.out.println(car);
         }
     }
 }
