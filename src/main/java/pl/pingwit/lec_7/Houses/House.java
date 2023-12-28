@@ -1,23 +1,23 @@
 package pl.pingwit.lec_7.Houses;
 
 public class House {
-    private String type;
+    private HouseType type;
     private int floors;
     private int tenants;
     private boolean heating;
 
-    public House(String type, int floors, int tenants, boolean heating) {
+    public House(HouseType type, int floors, int tenants, boolean heating) {
         this.type = type;
         this.floors = floors;
         this.tenants = tenants;
         this.heating = heating;
     }
 
-    public String getType() {
+    public HouseType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(HouseType type) {
         this.type = type;
     }
 
@@ -47,11 +47,11 @@ public class House {
 
     @Override
     public String toString() {
-        return "HousesClass{" +
-                "type='" + type + '\'' +
+        return "House{" +
+                "type=" + type +
                 ", floors=" + floors +
                 ", tenants=" + tenants +
-                ", isHeated=" + heating +
+                ", heating=" + heating +
                 '}';
     }
 }
