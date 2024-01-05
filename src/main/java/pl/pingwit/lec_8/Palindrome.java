@@ -14,7 +14,6 @@ public class Palindrome {
         for (int i = 0; i < array.length; i++) {
             invertedArray[i] = array[array.length - i - 1];
         }
-
         if (Arrays.equals(array, invertedArray)) {
             System.out.println("It's a palindrome");
         } else {
