@@ -3,7 +3,7 @@ package pl.pingwit.lec_7.PersonInfo;
 public class Person {
     private String name;
     private int age;
-    private static String text;
+    private static String text = "Hello from static";
 
     {
         System.out.println("A new instance of the class has been created!");
@@ -34,8 +34,9 @@ public class Person {
         return text;
     }
 
-    public static void setText() {
+    public static String setText() {
         Person.text = text;
+        return null;
     }
 
     @Override

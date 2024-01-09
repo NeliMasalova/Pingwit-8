@@ -13,7 +13,6 @@ public class Task_6_FromOneArrayToAnother {
                 evenNumbersCounter++;
             }
         }
-
         int[] evenNumbersFinalArray = new int[evenNumbersCounter];
         int index = 0;
         for (int i : evenNumbersTempArray) {

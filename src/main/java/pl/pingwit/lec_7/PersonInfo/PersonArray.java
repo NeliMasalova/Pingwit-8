@@ -1,4 +1,4 @@
-/*package pl.pingwit.lec_7.PersonInfo;
+package pl.pingwit.lec_7.PersonInfo;
 
 import java.util.Arrays;
 
@@ -11,9 +11,9 @@ public class PersonArray {
                 new Person("Draco Malfoy", 17),
                 new Person("Sirius Black", 36),
         };
-        for (Person person : persons) {
+        for (int i = 0; i < persons.length; i++) {
+            Person person = persons[i];
             System.out.println(person);
         }
-        System.out.println(Person.getText("Avada Kedavra!"));
     }
-}*/
+}

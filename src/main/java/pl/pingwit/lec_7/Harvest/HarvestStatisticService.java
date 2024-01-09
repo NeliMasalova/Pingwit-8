@@ -9,11 +9,12 @@ public class HarvestStatisticService {
             Harvest harvest = harvests[i];
             boolean updateResult = update(harvest, harvestStatistics);
             if (!updateResult) {
-
+                for (int j = 0; j < harvests.length; j++) {
+                    harvestStatistics[j] = new HarvestStatistic(harvest.getPlant(), harvest.getWeight());
+                }
             }
         }
-
-        return null;
+        return harvestStatistics;
     }
 
     private boolean update(Harvest harvest, HarvestStatistic[] harvestStatistics) {
@@ -24,7 +25,6 @@ public class HarvestStatisticService {
                 harvestStatistic.setTotalWeight(totalWeight);
                 return true;
             }
-
         }
         return false;
     }
