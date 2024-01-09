@@ -26,23 +26,26 @@ public class HouseMain {
     private static int countTenantsMultiStoreyBuilding(House[] houses) {
         int sumTenants = 0;
         for (House house : houses) {
-            if (house.getType().equals(HouseType.MULTI_STOREY_BUILDING)) {
+            if (house.getType().equals(HouseType.MULTI_STOREY_BUILDING)) { // HouseType.MULTI_STOREY_BUILDING == house.getType()
                 sumTenants += house.getTenants();
             }
         }
         return sumTenants;
     }
 
+    /*
+    Давай этот метод улучшим. Переименуем его в printByHouseTypeFilter(House[] houses, HouseType houseType)
+    */
     private static void printIndividualHouses(House[] houses) {
         for (House house : houses) {
-            if (house.getType().equals(HouseType.INDIVIDUAL)) {
+            if (house.getType().equals(HouseType.INDIVIDUAL)) { // Enum лучше сравнивать через ==, и первым всегда идет константа, чтобы избежать NullPointerException. Напомни мне пожалуйста на занятии про NPE
                 System.out.println(house);
             }
         }
     }
-    private static void switchHeating(House[] houses, boolean toggle) {
+    private static void switchHeating(House[] houses, boolean toggle) { // toggle -> isHeating / heating
         for (House house : houses) {
-            if (house.getType().equals(HouseType.MULTI_STOREY_BUILDING) && house.getFloors() >= FLOOR_CONDITION) {
+            if (house.getType().equals(HouseType.MULTI_STOREY_BUILDING) && house.getFloors() >= FLOOR_CONDITION) { // house.getType().equals(HouseType.MULTI_STOREY_BUILDING -> HouseType.MULTI_STOREY_BUILDING == house.getType()
                 house.setHeating(toggle);
             }
             System.out.println(house);
