@@ -9,7 +9,7 @@ public class FerryTicketOffice {
     public static final BigDecimal MAX_PASSENGER_CAR_PRICE = BigDecimal.valueOf(15.0);
     public static final int NUMBER_OF_PASSENGERS = 2;
 
-    public static void calculateAmountPayment(Vehicle[] vehicles) { // убери у метода static
+    public static void calculateAmountPayment(Vehicle[] vehicles) { // убери у метода static, метод должен возвращать не void, a BigDecimal
         BigDecimal ticketPrice = BigDecimal.valueOf(0.0);
         BigDecimal amountPay = BigDecimal.valueOf(0.0);
         int passengers = 0;
