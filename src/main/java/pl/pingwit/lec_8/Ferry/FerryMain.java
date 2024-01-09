@@ -20,6 +20,6 @@ public class FerryMain {
         // BigDecimal totalPayment = ticketOffice.calculateAmountPayment(vehicles);
         FerryTicketOffice.calculateAmountPayment(vehicles);
         System.out.println();
-        CheckFerryAccess.checkAccess(vehicles); // тоже самое, что и для FerryTicketOffice
+        CheckFerryAccess.checkAccess(vehicles); // тоже самое, что и для FerryTicketOffice, только возвращаемый тип Boolean isAllowed = 
     }
 }
