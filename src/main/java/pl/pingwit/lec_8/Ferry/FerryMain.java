@@ -16,8 +16,10 @@ public class FerryMain {
                 new Vehicle("4973-RR", Type.CARGO, 61, 10),
                 new Vehicle("1515-AC", Type.PASSENGER_CAR, 1, 5),
         };
+        // FerryTicketOffice ticketOffice = new FerryTicketOffice();
+        // BigDecimal totalPayment = ticketOffice.calculateAmountPayment(vehicles);
         FerryTicketOffice.calculateAmountPayment(vehicles);
         System.out.println();
-        CheckFerryAccess.checkAccess(vehicles);
+        CheckFerryAccess.checkAccess(vehicles); // тоже самое, что и для FerryTicketOffice
     }
 }
