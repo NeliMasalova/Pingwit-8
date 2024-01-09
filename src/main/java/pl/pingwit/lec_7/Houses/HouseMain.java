@@ -34,7 +34,8 @@ public class HouseMain {
     }
 
     private static void printIndividualHouses(House[] houses) {
-        for (House house : houses) {
+        for (int i = 0; i < houses.length; i++) {
+            House house = houses[i];
             if (house.getType().equals(HouseType.INDIVIDUAL)) {
                 System.out.println(house);
             }
