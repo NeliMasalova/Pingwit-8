@@ -1,10 +1,11 @@
 package pl.pingwit.lec_8.Ferry;
 
 public class CheckFerryAccess {
-
+    // public -> private для констант, метод не трогай
     public static final int MAX_PASSENGERS_NUMBER = 50;
     public static final int MAX_WEIGHT = 15;
 
+    // в этом методе тебе необходимо посчитать всех пассажиров в машинах и общий вес авто. И затем принять решение в допуске или отказе. Ты пока проверяешь для каждого отдельного автомобиля
     public static Boolean checkAccess(Vehicle[] vehicles) {
         boolean isAllowed = true;
         for (int i = 0; i < vehicles.length; i++) {
