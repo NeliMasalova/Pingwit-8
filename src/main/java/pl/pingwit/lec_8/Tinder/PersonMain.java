@@ -1,4 +1,4 @@
-package pl.pingwit.lec_8.Tinder;
+package pl.pingwit.lec_8.Tinder; // Tinder - пакеты с маленькой буквы. Везде надо переименовать
 
 public class PersonMain {
     public static void main(String[] args) {
@@ -10,6 +10,7 @@ public class PersonMain {
                 new Person("Erich Maria", "Remarque", 1898, Gender.MALE, FamilyStatus.SINGLE),
                 new Person("Arianna", "Gold", 2007, Gender.FEMALE, FamilyStatus.SINGLE),
         };
+        // обсудим решение на занятии
         Tinder.suggestCouple(persons);
     }
 }

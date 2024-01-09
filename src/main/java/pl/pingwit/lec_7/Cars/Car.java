@@ -1,4 +1,4 @@
-package pl.pingwit.lec_7.Cars;
+package pl.pingwit.lec_7.Cars; // название пакета должно быть с маленькой буквы
 
 public class Car {
     private String brand;
