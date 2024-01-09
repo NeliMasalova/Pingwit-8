@@ -11,6 +11,7 @@ public class Palindrome {
         char[] array = string.toCharArray();
         char[] invertedArray = new char[array.length];
 
+        // а давай без создания доп массива :)
         for (int i = 0; i < array.length; i++) {
             invertedArray[i] = array[array.length - i - 1];
         }
