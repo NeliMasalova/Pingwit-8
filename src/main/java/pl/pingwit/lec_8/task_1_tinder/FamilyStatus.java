@@ -1,0 +1,5 @@
+package pl.pingwit.lec_8.task_1_tinder;
+
+public enum FamilyStatus {
+    SINGLE, MARRIED
+}
