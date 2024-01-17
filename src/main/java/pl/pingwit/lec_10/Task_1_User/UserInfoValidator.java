@@ -7,7 +7,7 @@ public class UserInfoValidator {
     private static final Pattern NAME_PATTERN = Pattern.compile("[a-zA-zа-яА-Я]*");
     private static final Pattern TELEPHONE_PATTERN = Pattern.compile("\\d*");
 
-    public static boolean validateUserInfo(UserInfo userInfo) {
+    public boolean validateUserInfo(UserInfo userInfo) {
         boolean isValid = true;
         if (userInfo.userName().isBlank()) {
             System.out.println("Username cannot be empty!");
@@ -18,10 +18,12 @@ public class UserInfoValidator {
             System.out.println("Your name and surname can contain only letters: ");
             isValid = false;
         }
+
         if (!userInfo.email().matches("^(?=. {1,64}@)[A-Za-z0-9_-]+(\\\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\\\.[A-Za-z0-9-]+)*(\\\\.[A-Za-z]{2,})$")) {
             System.out.println("Invalid email address.");
             isValid = false;
         }
+
         if (!userInfo.telephone().matches("\\d*")){
             System.out.println("Phone number can contain only digits");
             isValid = false;

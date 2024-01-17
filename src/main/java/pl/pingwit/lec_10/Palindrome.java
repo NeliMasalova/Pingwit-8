@@ -1,6 +1,7 @@
 package pl.pingwit.lec_10;
 
 import org.apache.commons.lang3.StringUtils;
+
 import java.util.Scanner;
 
 public class Palindrome {
@@ -10,10 +11,10 @@ public class Palindrome {
         String string = scanner.nextLine();
 
         Palindrome palindrome = new Palindrome();
-        boolean b = palindrome.isPalindrome(string);
-        if (b){
+        boolean isPalindrome = palindrome.isPalindrome(string);
+        if (isPalindrome) {
             System.out.println("It's a palindrome");
-        }else{
+        } else {
             System.out.println("It's not a palindrome");
         }
     }

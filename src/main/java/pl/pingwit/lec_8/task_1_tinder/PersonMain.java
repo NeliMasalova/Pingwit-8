@@ -10,8 +10,8 @@ public class PersonMain {
                 new Person("Erich Maria", "Remarque", 1898, Gender.MALE, FamilyStatus.SINGLE),
                 new Person("Arianna", "Gold", 2007, Gender.FEMALE, FamilyStatus.SINGLE),
         };
-        // обсудим решение на занятии
+
         Tinder tinder = new Tinder();
-        tinder.suggestCouple(persons);
+        tinder.applyForm(persons);
     }
 }

@@ -15,9 +15,9 @@ public class FerryTicketOffice {
         for (Vehicle vehicle : vehicles) {
             if (Type.CARGO == vehicle.getType()) {
                 ticketPrice = CARGO_TICKET_PRICE;
-            } else if ((Type.PASSENGER_CAR) == vehicle.getType() && vehicle.getBoardPeople() <= NUMBER_OF_PASSENGERS) {
+            } else if (Type.PASSENGER_CAR == vehicle.getType() && vehicle.getBoardPeople() <= NUMBER_OF_PASSENGERS) {
                 ticketPrice = MIN_PASSENGER_CAR_PRICE;
-            } else if ((Type.PASSENGER_CAR) == vehicle.getType() && vehicle.getBoardPeople() > NUMBER_OF_PASSENGERS) {
+            } else if (Type.PASSENGER_CAR == vehicle.getType() && vehicle.getBoardPeople() > NUMBER_OF_PASSENGERS) {
                 ticketPrice = MAX_PASSENGER_CAR_PRICE;
             }
             amountPay = amountPay.add(ticketPrice);
