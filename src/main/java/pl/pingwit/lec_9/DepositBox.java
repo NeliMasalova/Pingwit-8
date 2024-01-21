@@ -19,14 +19,14 @@ public final class DepositBox {
 
     public Valuable[] getValuables() {
         return Arrays.copyOf(valuables, valuables.length);
-    }
+    } // нужен абзац между методами
     public Valuable[] extractValuables(String password) {
         if (this.password.equals(password)) {
             return Arrays.copyOf(valuables, valuables.length);
         } else {
             return new Valuable[0];
         }
-
+// это лишняя строка
     }
 
     @Override
