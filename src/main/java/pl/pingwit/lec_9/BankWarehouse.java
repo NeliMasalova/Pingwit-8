@@ -13,7 +13,7 @@ public final class BankWarehouse {
         this.name = name;
     }
 
-    public DepositBox next() {
+    public DepositBox next() { // в этот метод можем еще добавить проверку что depositBoxes не пустой массив, чтобы избежать IndexArray...
         DepositBox depositBox = depositBoxes[index];
         index++;
         if (index == depositBoxes.length) {
@@ -22,7 +22,7 @@ public final class BankWarehouse {
         return depositBox;
     }
 
-    public DepositBox[] depositBoxes() {
+    public DepositBox[] depositBoxes() { // вот здесь тоже клон надо возвращать
         return depositBoxes;
     }
 
