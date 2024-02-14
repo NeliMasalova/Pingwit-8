@@ -15,7 +15,7 @@ public class EmailAnnotationValidator {
                     declaredFields.setAccessible(true);
                     String o = (String) declaredFields.get(obj);
                     if (!EMAIL_PATTERN.matcher(o).matches()) {
-                        String message = "Invalid email address.";
+                        String message = "Invalid email address."; // давай сообщение сразу в конструктор исключения. Не вижу смысла делать отдельной переменной
                         throw new EmailValidationException(message);
                     }
                 }
