@@ -18,6 +18,8 @@ public class Application {
         LocalDate parse2 = LocalDate.parse("23-2022-01", dateTimeFormatter2);
         LocalDate parse3 = LocalDate.parse("15-07-2022", dateTimeFormatter3);
 
+
+
         System.out.println(dateTimeFormatter.format(parse) + " " + dateTimeFormatter4.format(parse) + " " +
                 dateTimeFormatter5.format(parse) + " " + dateTimeFormatter6.format(parse) + " " + dateTimeFormatter7.format(parse));
 
@@ -29,7 +31,8 @@ public class Application {
 
 
         LocalDateTime localDateTime = LocalDateTime.now();
-        DateTimeFormatter dateTimeFormatter8 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy , HH:mm ");
+        DateTimeFormatter dateTimeFormatter8 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy, HH:mm");
+        System.out.println(dateTimeFormatter8.getLocale().getCountry());
         System.out.println("The current daytime is: " + dateTimeFormatter8.format(localDateTime) + ".");
     }
 }

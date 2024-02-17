@@ -1,15 +1,26 @@
 package pl.pingwit.lec_16;
 
+import pl.pingwit.lec_16.task_1_email_annotation.Email;
+import pl.pingwit.lec_16.task_2_digit_annotation.OnlyDigit;
+import pl.pingwit.lec_16.task_3_default_value_annotation.DefaultValue;
+
 import java.time.LocalDate;
 
 public class CustomerDetails {
-    private String name;
-    private String surname;
+    @DefaultValue
+    private final String name;
+    @DefaultValue
+    private final String surname;
+    @DefaultValue
     @Email
-    private String email;
-    private String phone;
-    private LocalDate registrationDate;
-    private Integer priorityLevel;
+    private final String email;
+    @DefaultValue
+    @OnlyDigit
+    private final String phone;
+    @DefaultValue
+    private final LocalDate registrationDate;
+    @DefaultValue
+    private final Integer priorityLevel;
 
     public CustomerDetails(String name, String surname, String email, String phone, LocalDate registrationDate, Integer priorityLevel) {
         this.name = name;

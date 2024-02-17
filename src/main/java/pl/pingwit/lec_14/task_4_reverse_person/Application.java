@@ -5,8 +5,8 @@ public class Application {
         Person person = new Person("Harry", "Potter");
         Person person2 = new Person("Harry", "Potter");
 
-        PersonReverser charArrayReverser = new FirstRealisation();
-        PersonReverser stringUtilsReverser = new SecondRealisation();
+        PersonReverser charArrayReverser = new ArrayPersonReverser();
+        PersonReverser stringUtilsReverser = new StringUtilsPersonReverser();
 
         System.out.println(charArrayReverser.reversePerson(person));
         System.out.println(stringUtilsReverser.reversePerson(person2));

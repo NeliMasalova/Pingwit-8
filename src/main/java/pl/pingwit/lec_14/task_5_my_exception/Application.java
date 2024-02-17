@@ -5,8 +5,16 @@ public class Application {
         Printer printer = new Printer("Kyocera 3000");
         printer.turnOn();
 
-        try {
+       /* try {
             printer.print("Happy Birthday!");
+        } finally {
+            printer.turnOff();
+        }*/
+        try {
+            throw new MyException("");
+        } catch (MyException e) {
+            System.out.println("Hello from catch!");
+           
         } finally {
             printer.turnOff();
         }

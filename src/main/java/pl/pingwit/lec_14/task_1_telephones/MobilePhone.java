@@ -7,11 +7,14 @@ public class MobilePhone extends AbstractPhone{
 
     @Override
     public void makeCall() {
-        super.makeCall();
+        String contact = "Granny";
+        System.out.println("Calling " + contact);
+
     }
 
     @Override
     public void receiveCall() {
-        super.receiveCall();
+        String contact = "Mummy";
+        System.out.println("You get a call from " + contact);
     }
 }

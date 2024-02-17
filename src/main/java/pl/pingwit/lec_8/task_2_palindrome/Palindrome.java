@@ -1,9 +1,8 @@
-package pl.pingwit.lec_8;
+package pl.pingwit.lec_8.task_2_palindrome;
 
 import java.util.Scanner;
 
-// для этой задачи создай пакет task_2, а сам класс переименуй в Palindrome
-public class Task_2_palindrome {
+public class Palindrome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please, enter the line: ");

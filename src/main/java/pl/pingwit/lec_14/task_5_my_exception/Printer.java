@@ -13,13 +13,12 @@ public class Printer {
         System.out.println("Turn on.");
     }
 
-    public void print(String document) throws Exception {
+    public void print(String document) throws MyException {
         Random random = new Random();
-        boolean b = random.nextBoolean();
-        if (b) {
+        if (random.nextBoolean()) {
             System.out.println(document);
         } else {
-            throw new Exception("Ошибка подключения. Проверьте настройки подключения устройства.");
+            throw new MyException("Ошибка подключения. Проверьте настройки подключения устройства.");
         }
     }
 
