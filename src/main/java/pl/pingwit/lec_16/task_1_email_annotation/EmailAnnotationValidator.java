@@ -15,7 +15,7 @@ public class EmailAnnotationValidator {
                     declaredFields.setAccessible(true);
                     String o = (String) declaredFields.get(obj);
                     if (!EMAIL_PATTERN.matcher(o).matches()) {
-                        throw new EmailValidationException("Invalid email address.");
+                        throw new EmailValidationException("Invalid email address.");// как тебе идея добавить в EmailValidationException поле телефон, чтобы затем в message его добавить. Тогда ошибка красивая будет с данными вылетать
                     }
                 }
             }
