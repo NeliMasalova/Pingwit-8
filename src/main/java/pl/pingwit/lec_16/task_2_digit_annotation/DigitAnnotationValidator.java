@@ -14,7 +14,7 @@ public class DigitAnnotationValidator {
                 if (declaredFields.getType().equals(String.class) && annotation.annotationType().equals(OnlyDigit.class)) {
                     declaredFields.setAccessible(true);
                     if (!PHONE_NUMBER_PATTERN.matcher((String) declaredFields.get(obj)).matches()) {
-                        throw new PhoneNumberException("Invalid phone number.");
+                        throw new PhoneNumberException("Invalid phone number."); // как тебе идея добавить в PhoneNumberException поле телефон, чтобы затем в message его добавить. Тогда ошибка красивая будет с данными вылетать
                     }
                 }
             }
