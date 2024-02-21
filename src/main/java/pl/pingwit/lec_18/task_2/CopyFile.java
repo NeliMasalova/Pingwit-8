@@ -5,7 +5,11 @@ import java.io.*;
 public class CopyFile {
     public static void main(String[] args) {
         String inputPath = "src/main/java/pl/pingwit/lec_18/task_2/img.png";
-        String outputPath = "src/main/java/pl/pingwit/lec_18/task_2/img.png-copy2";
+        /* попробуй поменять код так, чтобы не пришлось указывать outputPath, т.е. копия создается в той же самой папке + 
+        если вызвать программу несколько раз, то будет создано несколько копий, т.е. copy_1, copy_2... и т.д.
+        
+        */
+        String outputPath = "src/main/java/pl/pingwit/lec_18/task_2/img.png-copy2"; 
 
         try (InputStream inputStream = new FileInputStream(inputPath);
              OutputStream outputStream = new FileOutputStream(outputPath)) {
