@@ -4,7 +4,7 @@ import java.io.*;
 
 public class BufferedReaderWriter {
     public static void main(String[] args) {
-        String inputPath = "src/main/java/pl/pingwit/lec_18/task_5/lyrics";
+        String inputPath = "src/main/java/pl/pingwit/lec_18/task_5/lyrics"; // добавь к файлу расширение
         String outputPath = "src/main/java/pl/pingwit/lec_18/task_5/lyrics-copy";
 
         try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(inputPath));
