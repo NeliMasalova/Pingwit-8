@@ -2,6 +2,7 @@ package pl.pingwit.lec_18.task_3;
 
 import java.io.*;
 
+// +
 public class CopyFile {
     public static void main(String[] args) {
         String inputPath = "src/main/java/pl/pingwit/lec_18/task_3/img.png";
