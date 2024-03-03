@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class FileReaderWriter {
     public static void main(String[] args) {
-        String inputPath = "src/main/java/pl/pingwit/lec_18/task_4/favourite_song"; //добавь к файлу расширение, а то на название пакета похоже
-        String outPath = "src/main/java/pl/pingwit/lec_18/task_4/favourite_song-copy2";
+        String inputPath = "src/main/java/pl/pingwit/lec_18/task_4/favourite_song.txt";
+        String outPath = "src/main/java/pl/pingwit/lec_18/task_4/favourite_song.txt-copy2.txt";
 
         try (FileReader fileReader = new FileReader(inputPath);
              FileWriter fileWriter = new FileWriter(outPath)) {

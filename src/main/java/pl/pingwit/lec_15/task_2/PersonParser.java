@@ -7,11 +7,11 @@ import java.time.format.DateTimeFormatter;
 
 public class PersonParser {
     public Person[] parsePerson(String string) throws DateTimeException {
-        String[] personData = string.split("; ");
+        String[] personData = string.replaceAll(" ", "").split(";");
         Person[] persons = new Person[personData.length];
 
         for (int i = 0; i < personData.length; i++) {
-            String[] parts = personData[i].split(", ");
+            String[] parts = personData[i].split(",");
             String name = parts[0];
             String surname = parts[1];
             DayOfWeek favouriteDay = DayOfWeek.of(Integer.parseInt(parts[2]));

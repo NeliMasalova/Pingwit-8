@@ -18,8 +18,6 @@ public class Application {
         LocalDate parse2 = LocalDate.parse("23-2022-01", dateTimeFormatter2);
         LocalDate parse3 = LocalDate.parse("15-07-2022", dateTimeFormatter3);
 
-//я понимаю что ты здесь игралась, но 3 абзаца многовато
-
         System.out.println(dateTimeFormatter.format(parse) + " " + dateTimeFormatter4.format(parse) + " " +
                 dateTimeFormatter5.format(parse) + " " + dateTimeFormatter6.format(parse) + " " + dateTimeFormatter7.format(parse));
 
@@ -28,7 +26,6 @@ public class Application {
 
         System.out.println(dateTimeFormatter3.format(parse3) + " " + dateTimeFormatter4.format(parse3) + " " +
                 dateTimeFormatter5.format(parse3) + " " + dateTimeFormatter6.format(parse3) + " " + dateTimeFormatter7.format(parse3));
-
 
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter dateTimeFormatter8 = DateTimeFormatter.ofPattern("dd-MMMM-yyyy, HH:mm");
