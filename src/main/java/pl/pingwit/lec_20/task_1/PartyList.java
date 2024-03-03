@@ -1,6 +1,5 @@
 package pl.pingwit.lec_20.task_1;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
