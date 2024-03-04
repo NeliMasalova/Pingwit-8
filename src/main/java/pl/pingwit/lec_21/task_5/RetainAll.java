@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class RetainAll {
     public static void main(String[] args) {
-        ArrayList<String> cinema1 = new ArrayList<>();
-        ArrayList<String> cinema2 = new ArrayList<>();
+        ArrayList<String> cinema1 = new ArrayList<>(); // аналогично Task_4
+        ArrayList<String> cinema2 = new ArrayList<>(); // аналогично Task_4
 
         cinema1.add("Harry Potter and the Goblet of Fire");
         cinema1.add("The Lord of the Rings: the return of the King");
