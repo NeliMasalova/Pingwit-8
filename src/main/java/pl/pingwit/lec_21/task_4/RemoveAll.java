@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class RemoveAll {
     public static void main(String[] args) {
-        ArrayList<String> cinema1 = new ArrayList<>();
-        ArrayList<String> cinema2 = new ArrayList<>();
+        ArrayList<String> cinema1 = new ArrayList<>(); // cinema1 - allFilms
+        ArrayList<String> cinema2 = new ArrayList<>(); // cinema2 - oldFilms, хватит уже использовать названия с цифрами
 
         cinema1.add("Harry Potter and the Goblet of Fire");
         cinema1.add("The Lord of the Rings: the return of the King");
