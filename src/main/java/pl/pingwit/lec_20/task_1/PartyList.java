@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class PartyList {
     public static void main(String[] args) {
-        ArrayList<String> guestList = new ArrayList<>();
+        ArrayList<String> guestList = new ArrayList<>(); // guestList -> guests
         guestList.add("Piter Parker");
         guestList.add("Tony Stark");
         guestList.add("Bruce Banner");
@@ -21,7 +21,7 @@ public class PartyList {
         if (guestList.contains(guestName)) {
             System.out.println("You are welcome!");
         } else {
-            System.out.println("Sorry, not today.");
+            System.out.println("Sorry, not today.");// просто обидно
         }
     }
 }
