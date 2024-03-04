@@ -2,8 +2,9 @@ package pl.pingwit.lec_19.task_2;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+// попробуй для этого класса исопльзовать record
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ATM {
+public class ATM { // ATM -> Atm
     private long id;
     private String area;
     private String city;
