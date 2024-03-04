@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+// такие же замечания, как для Task_2
 public class DeleteFromTheBeginningBenchmark {
     public static void main(String[] args) {
         int size = 100000;
