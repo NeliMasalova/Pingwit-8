@@ -27,7 +27,7 @@ public class DeleteFromTheMiddleBenchmark {
         }
         long startTime1 = System.currentTimeMillis(); // опять странное название переменной, нельзя так. startTime1 можно вообще удалить переменную и заново присвоить значение 'startTime', которую ты создавала выше
         deleteFromMiddle(integerLinkedList, size);
-        long endTime1 = System.currentTimeMillis();
+        long endTime1 = System.currentTimeMillis(); // аналогично startTime1
         System.out.println("Element removal execution time for Linked List is: " + (endTime1 - startTime1) + " milliseconds.");
     }
 
