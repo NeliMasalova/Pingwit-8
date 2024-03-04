@@ -32,7 +32,7 @@ public class DeleteFromTheMiddleBenchmark {
     }
 
     private static void deleteFromMiddle(List<Integer> list, int size) {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) { // опасный код пишешь, лучше используй list.size()
             list.remove(list.size() / 2);
         }
     }
