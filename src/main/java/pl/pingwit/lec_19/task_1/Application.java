@@ -16,7 +16,8 @@ public class Application {
             throw new RuntimeException(e);
         }
 
-        AnotherMotorcycle motorcycle1 = xmlMapper.readValue(new File("src/main/java/pl/pingwit/lec_19/task_1/Motorcycle.xml"), AnotherMotorcycle.class);
+        //AnotherMotorcycle - не очень понял зачем тебе этот класс. Можно использовать Motorcycle.class для десериализации
+        AnotherMotorcycle motorcycle1 = xmlMapper.readValue(new File("src/main/java/pl/pingwit/lec_19/task_1/Motorcycle.xml"), AnotherMotorcycle.class); // у тебя что-то с названием переменной случилось, надо поправить
         System.out.println(motorcycle1);
     }
 }
