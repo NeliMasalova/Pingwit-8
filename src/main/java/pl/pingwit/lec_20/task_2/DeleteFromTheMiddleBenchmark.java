@@ -12,7 +12,7 @@ public class DeleteFromTheMiddleBenchmark {
     public static void main(String[] args) {
         int size = 100000;
 
-        ArrayList<Integer> integers = new ArrayList<>();
+        ArrayList<Integer> integers = new ArrayList<>(); // integers -> arrayList - т.к. у тебя бенчмарк сравнения arrayList и linkedList, то такое название ок
         for (int i = 0; i < size; i++) {
             integers.add(i);
         }
@@ -21,11 +21,11 @@ public class DeleteFromTheMiddleBenchmark {
         long endTime = System.currentTimeMillis();
         System.out.println("Element removal execution time for Array List is: " + (endTime - startTime) + " milliseconds");
 
-        LinkedList<Integer> integerLinkedList = new LinkedList<>();
+        LinkedList<Integer> integerLinkedList = new LinkedList<>(); // integerLinkedList -> linkedList содержимое можно по дженерике определить
         for (int i = 0; i < size; i++) {
             integerLinkedList.add(i);
         }
-        long startTime1 = System.currentTimeMillis();
+        long startTime1 = System.currentTimeMillis(); // опять странное название переменной, нельзя так. startTime1 можно вообще удалить переменную и заново присвоить значение 'startTime', которую ты создавала выше
         deleteFromMiddle(integerLinkedList, size);
         long endTime1 = System.currentTimeMillis();
         System.out.println("Element removal execution time for Linked List is: " + (endTime1 - startTime1) + " milliseconds.");
