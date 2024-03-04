@@ -4,14 +4,14 @@ import java.math.BigDecimal;
 
 public class GenericMain {
     public static void main(String[] args) {
-        Generic<String> stringGeneric = new Generic<>("It's a generic string");
-        Generic<Long> longGeneric = new Generic<>(123789654L);
-        Generic<BigDecimal> bigDecimalGeneric = new Generic<BigDecimal>(new BigDecimal(10.58));
-        Generic<Boolean> booleanGeneric = new Generic<>(true);
+        Generic<?> firstGeneric = new Generic<>("It's a generic string");
+        Generic<?> secondGeneric = new Generic<>(123789654L);
+        Generic<?> thirdGeneric = new Generic<>(new BigDecimal(10.58));
+        Generic<?> fourthGeneric = new Generic<>(true);
 
-        stringGeneric.printType();
-        longGeneric.printType();
-        booleanGeneric.printType();
-        bigDecimalGeneric.printType();
+        firstGeneric.printType();
+        secondGeneric.printType();
+        thirdGeneric.printType();
+        fourthGeneric.printType();
     }
 }
