@@ -10,9 +10,9 @@ public class IntegerArrayList {
         for (int i = 1; i < size + 1; i++) {
             integers.add(0, i);
         }
-        System.out.println(integers);
+        System.out.println(integers); // сюда бы абзац добавить
         Iterator<Integer> iterator = integers.iterator();
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) { // вместо цикла for тебе нужна конструкция while(iterator.hasNext)
             if (iterator.next() % 2 == 0) {
                 iterator.remove();
             }
