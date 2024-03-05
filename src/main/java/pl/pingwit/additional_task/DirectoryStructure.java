@@ -17,7 +17,7 @@ public class DirectoryStructure {
                 System.out.println(a.getName());
                 printDirectoryStructure(a);
             } else {
-                System.out.println("      " + a.getName());
+                System.out.println("      " + a.getName()); // \t вместо пробелов в ковычках
             }
         }
     }
