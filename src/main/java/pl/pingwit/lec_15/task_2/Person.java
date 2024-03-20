@@ -53,7 +53,7 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", birthDate=" + birthDate +
+                ", birthdate=" + birthDate +
                 ", favouriteDay=" + favouriteDay +
                 '}';
     }
