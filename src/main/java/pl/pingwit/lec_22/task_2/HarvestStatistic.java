@@ -3,7 +3,7 @@ package pl.pingwit.lec_22.task_2;
 import java.math.BigDecimal;
 
 public class HarvestStatistic {
-    private String plant;
+    private final String plant;
     private BigDecimal totalWeight;
     private BigDecimal totalSquare;
 
@@ -11,14 +11,6 @@ public class HarvestStatistic {
         this.plant = plant;
         this.totalWeight = totalWeight;
         this.totalSquare = totalSquare;
-    }
-
-    public String getPlant() {
-        return plant;
-    }
-
-    public void setPlant(String plant) {
-        this.plant = plant;
     }
 
     public BigDecimal getTotalWeight() {

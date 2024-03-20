@@ -1,6 +1,5 @@
 package pl.pingwit.lec_22.task_2;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
@@ -18,32 +17,16 @@ public class Harvest {
         return field;
     }
 
-    public void setField(String field) {
-        this.field = field;
-    }
-
     public BigDecimal getSquare() {
         return square;
-    }
-
-    public void setSquare(BigDecimal square) {
-        this.square = square;
     }
 
     public String getPlant() {
         return plant;
     }
 
-    public void setPlant(String plant) {
-        this.plant = plant;
-    }
-
     public BigDecimal getWeight() {
         return weight;
-    }
-
-    public void setWeight(BigDecimal weight) {
-        this.weight = weight;
     }
 
     @Override
