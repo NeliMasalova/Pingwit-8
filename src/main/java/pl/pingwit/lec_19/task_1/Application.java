@@ -1,5 +1,6 @@
 package pl.pingwit.lec_19.task_1;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.File;
@@ -8,16 +9,15 @@ import java.io.IOException;
 public class Application {
     public static void main(String[] args) throws IOException {
         Motorcycle motorcycle = new Motorcycle("Yamaha", "R1M", 998, "m");
-        XmlMapper xmlMapper = new XmlMapper(); // скорее всего здесь тебе нужен был ObjectOutputStream, тогда поле точно не будет сериализоваться. XmlMapper возможно не обращает внимания на то что полк transient
+        ObjectMapper objectMapper = new ObjectMapper();
 
         try {
-            xmlMapper.writeValue(new File("src/main/java/pl/pingwit/lec_19/task_1/motorcycle7.xml"), motorcycle);
+           objectMapper.writeValue(new File("src/main/java/pl/pingwit/lec_19/task_1/motorcycle9.xml"), motorcycle);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        //AnotherMotorcycle - не очень понял зачем тебе этот класс. Можно использовать Motorcycle.class для десериализации
-        AnotherMotorcycle motorcycle1 = xmlMapper.readValue(new File("src/main/java/pl/pingwit/lec_19/task_1/Motorcycle.xml"), AnotherMotorcycle.class); // у тебя что-то с названием переменной случилось, надо поправить
-        System.out.println(motorcycle1);
+        /*Motorcycle motorcycle1 = objectMapper.readValue(new File("src/main/java/pl/pingwit/lec_19/task_1/Motorcycle.xml"), Motorcycle.class);
+        System.out.println(motorcycle1);*/
     }
 }

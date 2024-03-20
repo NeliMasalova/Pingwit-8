@@ -4,32 +4,31 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-// такие же замечания, как для Task_2
 public class DeleteFromTheBeginningBenchmark {
     public static void main(String[] args) {
         int size = 100000;
-        ArrayList<Integer> integers = new ArrayList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            integers.add(i);
+            arrayList.add(i);
         }
 
-        long startTime = System.currentTimeMillis();
-        deleteFromBeginning(integers, size);
-        long finishTime = System.currentTimeMillis();
-        System.out.println("Element removal execution time for Array List is: " + (finishTime - startTime) + " milliseconds.");
+        long startArrayList = System.currentTimeMillis();
+        deleteFromBeginning(arrayList, size);
+        long finishArrayList = System.currentTimeMillis();
+        System.out.println("Element removal execution time for Array List is: " + (finishArrayList - startArrayList) + " milliseconds.");
 
-        LinkedList<Integer> integerLinkedList = new LinkedList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         for (int i = 0; i < size; i++) {
-            integerLinkedList.add(i);
+            linkedList.add(i);
         }
-        long startTime1 = System.currentTimeMillis();
-        deleteFromBeginning(integerLinkedList, size);
-        long endTime1 = System.currentTimeMillis();
-        System.out.println("Element removal execution time for Linked List is: " + (endTime1 - startTime1) + " milliseconds.");
+        long startLinkedList = System.currentTimeMillis();
+        deleteFromBeginning(linkedList, size);
+        long finishLinkedList = System.currentTimeMillis();
+        System.out.println("Element removal execution time for Linked List is: " + (finishLinkedList - startLinkedList) + " milliseconds.");
     }
 
     private static void deleteFromBeginning(List<Integer> list, int size) {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < list.size(); i++) {
             list.remove(0);
         }
     }

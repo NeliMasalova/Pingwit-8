@@ -4,8 +4,6 @@ import pl.pingwit.lec_11.task_1_doctor_vet.Pet;
 
 import java.util.Arrays;
 
-
-//+
 public class PetGeneric<T extends Pet>{
     private T[] pets;
 
