@@ -10,11 +10,11 @@ public class Application {
         clubs.add(new FootballTeam("Spain", "Madrid", "Real Madrid"));
         clubs.add(new FootballTeam("Germany", "Schalke", "Schalke 04"));
 
-        Set<String> uniqueCountries = printCountryClub(clubs); // printCountryClub - почему print? Вроде ничего не печатает. Мы получаем страны, вот так и назови
+        Set<String> uniqueCountries = getClubCountry(clubs);
         System.out.println(uniqueCountries);
     }
 
-    private static Set<String> printCountryClub(ArrayList<FootballTeam> clubs) {
+    private static Set<String> getClubCountry(ArrayList<FootballTeam> clubs) {
         Set<String> countries = new HashSet<>();
         for (FootballTeam club : clubs) {
             countries.add(club.getCountry());
