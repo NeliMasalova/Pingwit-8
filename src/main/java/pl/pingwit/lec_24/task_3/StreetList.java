@@ -18,7 +18,7 @@ public class StreetList {
         addresses.add(new Address("Киев", "Октябрьская", 1, 10));
 
         List<String> resultStreets = addresses.stream()
-                .map(x -> x.getStreet())
+                .map(Address::getStreet)
                 .toList();
 
         resultStreets.forEach(System.out::println);

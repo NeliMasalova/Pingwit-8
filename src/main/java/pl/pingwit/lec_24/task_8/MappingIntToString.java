@@ -7,9 +7,9 @@ import java.util.function.Function;
 //Если получится, то учесть правильность окончаний, если нет, то можно сократить до "руб".
 public class MappingIntToString {
     public static void main(String[] args) {
-        List<Integer> integers = List.of(1, 18, 94, 1000005, -15, 0);
+        List<Integer> integers = List.of(1, 18, 94, 1000005, -15, 0, 33);
 
-        Function<Integer, String> mappingIntegerToString = number -> String.valueOf(number) + " руб.";
+        Function<Integer, String> mappingIntegerToString = number -> (number) + " руб.";
 
         List<String> resultStrings = integers.stream()
                 .map(mappingIntegerToString)

@@ -18,7 +18,7 @@ public class UniqueCity {
         addresses.add(new Address("Киев", "Октябрьская", 1, 10));
 
         List<String> resultUniqueCities = addresses.stream()
-                .map(x -> x.getCity())
+                .map(Address::getCity)
                 .distinct()
                 .toList();
 
