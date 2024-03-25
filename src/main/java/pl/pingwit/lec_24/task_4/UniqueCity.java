@@ -7,7 +7,7 @@ import java.util.List;
 
 public class UniqueCity {
     public static void main(String[] args) {
-        ArrayList<Address> addresses = new ArrayList<>();
+        List<Address> addresses = new ArrayList<>();
         addresses.add(new Address("Минск", "Проспект Независимости", 10, 10));
         addresses.add(new Address("Минск", "Проспект Независимости", 100, 44));
         addresses.add(new Address("Минск", "Октябрьская", 16, 1));

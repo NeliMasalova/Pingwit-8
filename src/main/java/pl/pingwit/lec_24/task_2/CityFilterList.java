@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CityFilterList {
     public static void main(String[] args) {
-        ArrayList<Address> addresses = new ArrayList<>();
+        List<Address> addresses = new ArrayList<>();
         addresses.add(new Address("Минск", "Проспект Независимости", 10, 10));
         addresses.add(new Address("Минск", "Проспект Независимости", 100, 44));
         addresses.add(new Address("Минск", "Октябрьская", 16, 1));
@@ -16,7 +16,7 @@ public class CityFilterList {
         addresses.add(new Address("Киев", "Октябрьская", 1, 10));
 
         List<Address> resultFilterCity = addresses.stream()
-                .filter(x -> x.getCity().equals(("Киев")))
+                .filter(city -> city.getCity().equals(("Киев")))
                 .toList();
 
         resultFilterCity.forEach(System.out::println);

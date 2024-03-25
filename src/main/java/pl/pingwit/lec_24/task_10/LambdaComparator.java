@@ -13,7 +13,7 @@ public class LambdaComparator {
         strings.add("e");
         strings.add("k");
 
-        Comparator<String> reverseComparator = ((s1, s2) -> s2.compareTo(s1));
+        Comparator<String> reverseComparator = ((firstString, secondString) -> secondString.compareTo(firstString));
 
         strings.sort(reverseComparator);
 

@@ -3,12 +3,14 @@ package pl.pingwit.lec_24.task_5;
 import pl.pingwit.lec_24.task_2.Address;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        ArrayList<Address> addresses = new ArrayList<>();
+
+        List<Address> addresses = new ArrayList<>();
         addresses.add(new Address("Минск", "Проспект Независимости", 10, 10));
         addresses.add(new Address("Минск", "Проспект Независимости", 100, 44));
         addresses.add(new Address("Минск", "Октябрьская", 16, 1));

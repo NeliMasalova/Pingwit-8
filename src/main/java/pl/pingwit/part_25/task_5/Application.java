@@ -6,18 +6,18 @@ import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        List<Cars> cars = List.of(new Cars("Audi", "R34", "gas"),
-                new Cars("Toyota", "Prius", "gas"),
-                new Cars("Audi", "A6", "electric vehicle"),
-                new Cars("Volvo", "XC50", "diesel"),
-                new Cars("Opel", "Corsa", "gas"),
-                new Cars("Volvo", "V40", "electric vehicle"),
-                new Cars("Opel", "Zafira", "gas"),
-                new Cars("Volvo", "XC60", "electric vehicle"),
-                new Cars("Opel", "Astra", "electric vehicle"));
+        List<Car> cars = List.of(new Car("Audi", "R34", "gas"),
+                new Car("Toyota", "Prius", "gas"),
+                new Car("Audi", "A6", "electric vehicle"),
+                new Car("Volvo", "XC50", "diesel"),
+                new Car("Opel", "Corsa", "gas"),
+                new Car("Volvo", "V40", "electric vehicle"),
+                new Car("Opel", "Zafira", "gas"),
+                new Car("Volvo", "XC60", "electric vehicle"),
+                new Car("Opel", "Astra", "electric vehicle"));
 
 
-        Map<Boolean, List<Cars>> electricVehicle = cars.stream()
+        Map<Boolean, List<Car>> electricVehicle = cars.stream()
                 .collect(Collectors.partitioningBy(car -> car.type().equals("electric vehicle")));
         System.out.println(electricVehicle);
     }

@@ -5,10 +5,10 @@ import java.util.List;
 
 public class StreamFilter {
 
-    public static final int LENGTH_CONDITION = 5;
+    private static final int MAX_STRING_LENGTH = 5;
 
     public static void main(String[] args) {
-        ArrayList<String> strings = new ArrayList<>();
+        List<String> strings = new ArrayList<>();
         strings.add("Напозорился на собеседовании и спит.");
         strings.add("NullPointerException");
         strings.add("");
@@ -19,7 +19,7 @@ public class StreamFilter {
         strings.add("job! (no)");
 
         List<String> resultStrings = strings.stream()
-                .filter(x -> x.length() > LENGTH_CONDITION)
+                .filter(x -> x.length() > MAX_STRING_LENGTH)
                 .toList();
 
         resultStrings.forEach(System.out::println);
