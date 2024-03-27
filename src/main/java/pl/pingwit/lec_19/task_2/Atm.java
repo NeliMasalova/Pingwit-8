@@ -3,7 +3,7 @@ package pl.pingwit.lec_19.task_2;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record Atm(
+public record Atm( // изменил название, т.к. не запускался код
         long id,
         String area,
         String city,

@@ -3,9 +3,9 @@ package pl.pingwit.lec_22.task_4;
 import java.time.LocalDate;
 
 public record AccountInfo(String name, String surname, String phone, String mail,
-                          LocalDate birthdate) implements Comparable<AccountInfo> {
+                          LocalDate birthdate) implements Comparable<AccountInfo> {//абзац
     @Override
-    public int compareTo(AccountInfo o) {
+    public int compareTo(AccountInfo o) { // можно было не имплементировать Comparable, а создать компаратор в методе мейн и передать его для сортировки
         int nameResult = this.name().compareTo(o.name());
         if (nameResult != 0) {
             return -nameResult ;

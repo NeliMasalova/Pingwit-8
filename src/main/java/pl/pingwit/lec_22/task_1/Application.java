@@ -23,7 +23,7 @@ public class Application {
 
     private static Map<String, Integer> countUser(ArrayList<VisitingOnlineResources> visits) {
         Map<String, Integer> visitsCount = new TreeMap<>();
-        for (VisitingOnlineResources visit : visits) {
+        for (VisitingOnlineResources visit : visits) { // попробуешь написать это на стримах?
             String userName = visit.userName();
             if (visitsCount.containsKey(userName)) {
                 Integer count = visitsCount.get(userName);

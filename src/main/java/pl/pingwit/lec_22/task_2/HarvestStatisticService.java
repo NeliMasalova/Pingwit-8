@@ -8,7 +8,7 @@ import java.util.TreeMap;
 public class HarvestStatisticService {
     public Map<String, HarvestStatistic> calculateStatistics(List<Harvest> harvests) {
         Map<String, HarvestStatistic> statisticsMap = new TreeMap<>();
-        for (Harvest harvest : harvests) {
+        for (Harvest harvest : harvests) { // давай эту точно на стримах
             String plant = harvest.getPlant();
             BigDecimal weight = harvest.getWeight();
             BigDecimal square = harvest.getSquare();

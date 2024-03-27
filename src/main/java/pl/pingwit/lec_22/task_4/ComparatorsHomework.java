@@ -3,6 +3,7 @@ package pl.pingwit.lec_22.task_4;
 import java.time.LocalDate;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
 
@@ -19,5 +20,12 @@ public class ComparatorsHomework {
 
         System.out.println("===================");
         new TreeSet<>(accountsInfo).forEach(System.out::println);
+
+        Comparator<AccountInfo> nameSurnameComparator = Comparator.comparing(AccountInfo::name)
+                .thenComparing(AccountInfo::surname);
+        accountsInfo.sort(nameSurnameComparator);
+        accountsInfo.forEach(System.out::println);
+
+        // и такую же процедуру для двух других сортировок
     }
 }

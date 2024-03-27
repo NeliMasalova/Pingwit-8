@@ -21,7 +21,7 @@ public class Application {
         addresses.add(new Address("Киев", "Октябрьская", 1, 10));
 
         Set<CityStreet> warsawStreets = addresses.stream()
-                .filter(address -> address.getCity().equals("Warsaw"))
+                .filter(address -> address.getCity().equals("Warsaw")) // лучше использовать "Warsaw".equals(address.getCity()) - чтобы избежать NullPointerException, если город будет null
                 .map(address -> new CityStreet(address.getCity(), address.getStreet()))
                 .collect(Collectors.toSet());
 

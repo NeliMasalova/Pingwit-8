@@ -14,10 +14,13 @@ public class PredicateExample {
                 new UserInfo("Lena", "Ivanova", "76555", "li@gmail.com", LocalDate.of(1998, 12, 12)),
                 new UserInfo("Sasha", "Sergeeev", "98876666", "ss@gmail.com", LocalDate.of(2005, 12, 12)));
 
+        // давай уберем "!"
+        // startsWithPredicate -> excludeNamesStartsWith
         Predicate<UserInfo> startsWithPredicate = userInfo -> !userInfo.name().startsWith("S")
                 && !userInfo.name().startsWith("P")
                 && !userInfo.name().startsWith("A");
 
+        // userInfos.removeIf(startsWithPredicate); вместо кода ниже
         List<UserInfo> infosResult = userInfos.stream()
                 .filter(startsWithPredicate)
                 .toList();

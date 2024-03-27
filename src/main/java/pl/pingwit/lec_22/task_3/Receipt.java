@@ -8,8 +8,8 @@ import java.util.Objects;
 public class Receipt {
     private Map<Product, Integer> items;
     private BigDecimal totalPayment;
-    private LocalDate date;
-    private LocalDate time;
+    private LocalDate date; // date+time -> LocalDate -> LocalDateTime
+    private LocalDate time; // это поле удали
 
     public Receipt(Map<Product, Integer> items, BigDecimal totalPayment, LocalDate date, LocalDate time) {
         this.items = items;

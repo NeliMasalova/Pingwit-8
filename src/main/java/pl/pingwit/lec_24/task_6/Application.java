@@ -21,7 +21,7 @@ public class Application {
         List<CityStreet> result = addresses.stream()
                 .filter(address -> address.getCity().equals("Киев"))
                 .map(address -> new CityStreet(address.getCity(), address.getStreet()))
-                .toList();
+                .toList();// вместо toList() можно сразу вызвать forEach, это опционально
 
         result.forEach(cityStreet -> System.out.println("Улица: " + cityStreet));
     }
