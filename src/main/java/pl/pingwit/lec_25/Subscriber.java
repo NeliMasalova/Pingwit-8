@@ -1,4 +1,4 @@
-package pl.pingwit.task_25;
+package pl.pingwit.lec_25;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -55,7 +55,7 @@ public class Subscriber {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Subscriber that = (Subscriber) o;
-        return contractId == that.contractId && Objects.equals(name, that.name) && Objects.equals(surname, that.surname) && Objects.equals(dateOfBirth, that.dateOfBirth) && Objects.equals(contractDate, that.contractDate) && Objects.equals(isVip, that.isVip) && Objects.equals(city, that.city);
+        return Objects.equals(name, that.name) && Objects.equals(surname, that.surname) && Objects.equals(contractId, that.contractId) && Objects.equals(dateOfBirth, that.dateOfBirth) && Objects.equals(contractDate, that.contractDate) && Objects.equals(isVip, that.isVip) && Objects.equals(city, that.city);
     }
 
     @Override

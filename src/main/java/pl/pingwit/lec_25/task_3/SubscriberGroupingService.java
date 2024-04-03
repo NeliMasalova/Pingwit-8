@@ -1,6 +1,6 @@
-package pl.pingwit.task_25.task_3;
+package pl.pingwit.lec_25.task_3;
 
-import pl.pingwit.task_25.Subscriber;
+import pl.pingwit.lec_25.Subscriber;
 
 import java.util.List;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package pl.pingwit.task_25.task_1;
+package pl.pingwit.lec_25.task_1;
 
-import pl.pingwit.task_25.Subscriber;
+import pl.pingwit.lec_25.Subscriber;
 
 import java.time.LocalDate;
 import java.util.List;

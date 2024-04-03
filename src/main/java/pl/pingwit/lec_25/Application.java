@@ -1,9 +1,7 @@
-package pl.pingwit.task_25;
+package pl.pingwit.lec_25;
 
-import pl.pingwit.task_25.task_1.SubscriberFindService;
-import pl.pingwit.task_25.task_3.SubscriberGroupingService;
-import pl.pingwit.task_25.task_3.NoVip;
-
+import pl.pingwit.lec_25.task_1.SubscriberFindService;
+import pl.pingwit.lec_25.task_3.SubscriberGroupingService;
 import java.util.List;
 import java.time.LocalDate;
 
