@@ -2,13 +2,24 @@ package pl.pingwit.lec_22.task_1;
 
 import pl.pingwit.lec_21.task_2.VisitingOnlineResources;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        ArrayList<VisitingOnlineResources> visits = new ArrayList<>();
+        List<VisitingOnlineResources> visits = getVisitingOnlineResources();
+
+        /*Map<String, Integer> stringIntegerMap = countUser(visits);
+        System.out.println(stringIntegerMap);*/
+
+        Map<String, Long> resultByVisitingSite = visits.stream()
+                .collect(Collectors.groupingBy(visitingOnlineResources -> visitingOnlineResources.userName(),
+                        Collectors.counting()));
+        System.out.println(resultByVisitingSite);
+    }
+
+    private static List<VisitingOnlineResources> getVisitingOnlineResources() {
+        List<VisitingOnlineResources> visits = new ArrayList<>();
         visits.add(new VisitingOnlineResources("Alex", "aliaksandr-famin-s-school.teachable.com"));
         visits.add(new VisitingOnlineResources("Alex", "javarush.com"));
         visits.add(new VisitingOnlineResources("Piter", "l.wikipedia.org"));
@@ -16,14 +27,12 @@ public class Application {
         visits.add(new VisitingOnlineResources("Ben", "gismeteo.pl"));
         visits.add(new VisitingOnlineResources("Ben", "gismeteo.pl"));
         visits.add(new VisitingOnlineResources("Ben", "github.com"));
-
-        Map<String, Integer> stringIntegerMap = countUser(visits);
-        System.out.println(stringIntegerMap);
+        return visits;
     }
 
-    private static Map<String, Integer> countUser(ArrayList<VisitingOnlineResources> visits) {
+    private static Map<String, Integer> countUser(List<VisitingOnlineResources> visits) {
         Map<String, Integer> visitsCount = new TreeMap<>();
-        for (VisitingOnlineResources visit : visits) { // попробуешь написать это на стримах?
+        for (VisitingOnlineResources visit : visits) { 
             String userName = visit.userName();
             if (visitsCount.containsKey(userName)) {
                 Integer count = visitsCount.get(userName);
