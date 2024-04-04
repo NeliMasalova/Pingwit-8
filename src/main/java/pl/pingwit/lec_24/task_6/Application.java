@@ -18,11 +18,9 @@ public class Application {
         addresses.add(new Address("Киев", "Крещатик", 13, 13));
         addresses.add(new Address("Киев", "Октябрьская", 1, 10));
 
-        List<CityStreet> result = addresses.stream()
+        addresses.stream()
                 .filter(address -> address.getCity().equals("Киев"))
                 .map(address -> new CityStreet(address.getCity(), address.getStreet()))
-                .toList();// вместо toList() можно сразу вызвать forEach, это опционально
-
-        result.forEach(cityStreet -> System.out.println("Улица: " + cityStreet));
+                .forEach(cityStreet -> System.out.println("Улица: " + cityStreet));
     }
 }

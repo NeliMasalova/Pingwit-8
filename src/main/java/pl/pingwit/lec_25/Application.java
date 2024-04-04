@@ -1,6 +1,7 @@
 package pl.pingwit.lec_25;
 
 import pl.pingwit.lec_25.task_1.SubscriberFindService;
+import pl.pingwit.lec_25.task_2.SubscriberStatisticService;
 import pl.pingwit.lec_25.task_3.SubscriberGroupingService;
 import java.util.List;
 import java.time.LocalDate;
@@ -18,6 +19,11 @@ public class Application {
         subscriberFindService.findAnySubscriber(subscribers, "Warsaw");
         subscriberFindService.allSubscribersConnectionBeforeDate(subscribers, LocalDate.now());
         subscriberFindService.vipSearch(subscribers, "Warsaw");
+
+        System.out.println("=======");
+        SubscriberStatisticService subscriberStatisticService = new SubscriberStatisticService();
+        subscriberStatisticService.subscriberStatisticByAge(subscribers);
+        subscriberStatisticService.subscriberStatisticByContractDay(subscribers);
 
         System.out.println("=========task_3.1============");
         SubscriberGroupingService subscriberGroupingService = new SubscriberGroupingService();
