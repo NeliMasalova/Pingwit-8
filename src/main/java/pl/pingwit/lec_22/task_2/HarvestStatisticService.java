@@ -8,11 +8,11 @@ import java.util.TreeMap;
 public class HarvestStatisticService {
     public Map<String, HarvestStatistic> calculateStatistics(List<Harvest> harvests) {
         Map<String, HarvestStatistic> statisticsMap = new TreeMap<>();
-        for (Harvest harvest : harvests) { // давай эту точно на стримах
+        for (Harvest harvest : harvests) {
             String plant = harvest.getPlant();
             BigDecimal weight = harvest.getWeight();
             BigDecimal square = harvest.getSquare();
-            if (statisticsMap.containsKey(plant)){
+            if (statisticsMap.containsKey(plant)) {
                 HarvestStatistic statistic = statisticsMap.get(plant);
                 statistic.setTotalWeight(statistic.getTotalWeight().add(weight));
                 statistic.setTotalSquare(statistic.getTotalSquare().add(square));
@@ -20,6 +20,6 @@ public class HarvestStatisticService {
                 statisticsMap.put(plant, new HarvestStatistic(plant, weight, square));
             }
         }
-            return statisticsMap;
+        return statisticsMap;
     }
 }

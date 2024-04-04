@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
 
-// лишняя строка, удали
 public class Harvest {
     @JsonProperty("field_xms")
     private String field;
