@@ -13,14 +13,9 @@ public class LambdaComparator {
         strings.add("e");
         strings.add("k");
 
-        // Comparator<String> stringComparator = Comparator.reverseOrder();
-        Comparator<String> reverseComparator = ((firstString, secondString) -> secondString.compareTo(firstString));
+        Comparator<String> stringComparator = (Comparator.reverseOrder());
 
-        strings.sort(reverseComparator);
-
-        //strings.forEach(System.out::println); - опционально
-        for (String str : strings) {
-            System.out.println(str);
-        }
+        strings.sort(stringComparator);
+        strings.forEach(System.out::println);
     }
 }
