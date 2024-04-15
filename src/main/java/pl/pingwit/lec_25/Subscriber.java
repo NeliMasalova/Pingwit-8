@@ -4,13 +4,13 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Subscriber {
-    private String name;
-    private String surname;
-    private String contractId;
-    private LocalDate dateOfBirth;
-    private LocalDate contractDate;
-    private Boolean isVip;
-    private String city;
+    private final String name;
+    private final String surname;
+    private final String contractId;
+    private final LocalDate dateOfBirth;
+    private final LocalDate contractDate;
+    private final Boolean isVip;
+    private final String city;
 
     public Subscriber(String name, String surname, String contractId, LocalDate dateOfBirth, LocalDate contractDate, Boolean isVip, String city) {
         this.name = name;

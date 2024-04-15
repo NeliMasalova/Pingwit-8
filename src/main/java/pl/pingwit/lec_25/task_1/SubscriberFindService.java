@@ -4,7 +4,6 @@ import pl.pingwit.lec_25.Subscriber;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 public class SubscriberFindService {
     public boolean allSubscribersConnectionBeforeDate(List<Subscriber> subscribers, LocalDate connectionDate) {

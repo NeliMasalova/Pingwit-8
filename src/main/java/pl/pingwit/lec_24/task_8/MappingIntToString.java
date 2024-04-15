@@ -8,7 +8,7 @@ public class MappingIntToString {
         List<Integer> integers = List.of(1, 18, 92, 1000005, 15, 0, 33, 12);
 
         List<String> strings = integers.stream()
-                .map(element -> element.toString())
+                .map(Object::toString)
                 .toList();
 
         Function<String, String> mappingIntegerToString = number -> {
