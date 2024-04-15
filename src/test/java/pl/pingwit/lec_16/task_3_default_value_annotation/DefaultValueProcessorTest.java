@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import pl.pingwit.lec_16.CustomerDetails;
 import java.time.LocalDate;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class DefaultValueProcessorTest {
     DefaultValueProcessor target = new DefaultValueProcessor();
