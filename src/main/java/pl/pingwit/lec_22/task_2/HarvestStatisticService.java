@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class HarvestStatisticService {
-    public Map<String, HarvestStatistic> calculateStatistics(List<Harvest> harvests) {
-        Map<String, HarvestStatistic> harvestStatisticResult = new TreeMap<>();
+    public Map<String, HarvestStatistic> calculateStatistics(List<Harvest> harvests) { // а на стримах пробовала решить?
+        Map<String, HarvestStatistic> harvestStatisticResult = new TreeMap<>(); // абзац
         for (Harvest harvest : harvests) {
             String plant = harvest.getPlant();
             BigDecimal weight = harvest.getWeight();

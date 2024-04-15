@@ -3,10 +3,10 @@ package pl.pingwit.part_26.task_4;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+//очень хорошо
 public class Application {
     public static void main(String[] args) {
-        List<Student> students = List.of(new Student("Piter", "Parker", 99),
+        List<Student> students = List.of(new Student("Piter", "Parker", 99), // new Student с новой строки
                 new Student("Piter", "Fisher", 58),
                 new Student("Sherlock", "Holmes", 100),
                 new Student("Anna", "Gawalda", 77),

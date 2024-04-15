@@ -14,17 +14,17 @@ public class SubscriberStatisticService {
                 .map(Subscriber::getDateOfBirth)
                 .map(date -> Period.between(date, LocalDate.now()))
                 .map(Period::getYears)
-                .collect(Collectors.summarizingInt(Integer::intValue));
+                .collect(Collectors.summarizingInt(Integer::intValue));//абзац
         return String.format("Количество абонентов - %d. Самый юный - %d лет, самый возрастной - %d лет, средний возраст - %f лет.",
                 statisticByAge.getCount(), statisticByAge.getMin(), statisticByAge.getMax(), statisticByAge.getAverage());
     }
 
     public String subscriberStatisticByContractDay(List<Subscriber> subscribers) {
-        IntSummaryStatistics statisticsByContractDay = subscribers.stream()
+        IntSummaryStatistics statisticsByContractDay = subscribers.stream()// еще нужен фильтр на проверку VIP
                 .map(Subscriber::getContractDate)
                 .map(date -> Period.between(date, LocalDate.now()))
                 .map(Period::getYears)
-                .collect(Collectors.summarizingInt(Integer::intValue));
+                .collect(Collectors.summarizingInt(Integer::intValue));//абзац
         return String.format("Количество абонентов - %d. Самый долгий контракт - %d. Средний срок контракта - %f лет.",
                 statisticsByContractDay.getCount(), statisticsByContractDay.getMax(), statisticsByContractDay.getAverage());
     }

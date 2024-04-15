@@ -16,5 +16,11 @@ public class FindLowRatingHotel {
         Optional<Hotel> resultLowRatingHotel = hotels.stream()
                 .min(Comparator.comparing(Hotel::hotelRating));
         resultLowRatingHotel.ifPresent(System.out::println);
+
+        /*
+        hotels.stream()
+                .min(Comparator.comparing(Hotel::hotelRating))
+                .ifPresent(System.out::println);
+        */
     }
 }

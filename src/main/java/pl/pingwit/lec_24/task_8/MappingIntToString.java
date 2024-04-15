@@ -5,13 +5,13 @@ import java.util.function.Function;
 
 public class MappingIntToString {
     public static void main(String[] args) {
-        List<Integer> integers = List.of(1, 18, 92, 1000005, 15, 0, 33, 12);
+        List<Integer> integers = List.of(101, 18, 92, 1000005, 15, 0, 33, 12);
 
         List<String> strings = integers.stream()
                 .map(Object::toString)
                 .toList();
 
-        Function<String, String> mappingIntegerToString = number -> {
+        Function<String, String> mappingIntegerToString = number -> { // такие конструкции обычно пишут внутри метода map(), а лучше вынести вы отдельный метод, который принимает строку и возвращает строку
             String ending = " рублей.";
             if (number.endsWith("1")) {
                 ending = " рубль.";
@@ -27,5 +27,12 @@ public class MappingIntToString {
                 .map(mappingIntegerToString)
                 .forEach(System.out::println);
 
+       /* можно все map() объединить в один стрим
+        integers.stream()
+                .map(Object::toString)
+                .map(mappingIntegerToString)
+                .forEach(System.out::println);
+
+        */
     }
 }

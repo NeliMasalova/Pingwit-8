@@ -6,13 +6,13 @@ import java.time.LocalDate;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class DefaultValueProcessorTest {
-    DefaultValueProcessor target = new DefaultValueProcessor();
+    DefaultValueProcessor target = new DefaultValueProcessor(); //private
 
     @Test
     void shouldSetNowWhenLocalDateIsNull() throws IllegalAccessException {
         //given
         CustomerDetails customerDetailsWithNullDate = new CustomerDetails("test", "test", "test", "test", null, 1);
-        CustomerDetails expected = new CustomerDetails("test", "test", "test", "test", LocalDate.now(), 1);
+        CustomerDetails expected = new CustomerDetails("test", "test", "test", "test", LocalDate.now(), 1); // FYI: если я запущу этот тест в полночь, то рано или поздно он упадет из-за LocalDate.now
         //when
         target.process(customerDetailsWithNullDate);
         //then
@@ -41,6 +41,7 @@ class DefaultValueProcessorTest {
         assertThat(customerDetailsWithNullStrings).isEqualTo(expected);
     }
 
+    // если тест не нужен, то удаляй сразу
    /* @Test
     void shouldThrowExceptionWhenStringIsEmpty(){
         //given
