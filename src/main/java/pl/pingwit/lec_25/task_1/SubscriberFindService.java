@@ -8,25 +8,19 @@ import java.util.Optional;
 
 public class SubscriberFindService {
     public boolean allSubscribersConnectionBeforeDate(List<Subscriber> subscribers, LocalDate connectionDate) {
-        boolean result = subscribers.stream()
+        return subscribers.stream()
                 .allMatch(subscriber -> subscriber.getContractDate().isBefore(connectionDate));
-        System.out.println(result);
-        return result;
     }
 
-    public Optional<Subscriber> findAnySubscriber(List<Subscriber> subscribers, String city) {
-        Optional<Subscriber> resultFindAny = subscribers.stream()
+    public Subscriber findAnySubscriber(List<Subscriber> subscribers, String city) {
+        return subscribers.stream()
                 .filter(subscriber -> subscriber.getCity().equals(city))
-                .findAny();
-        Subscriber subscriber = resultFindAny.orElseThrow(() -> new RuntimeException("Subscribers don't found"));
-        System.out.println(subscriber);
-        return resultFindAny;
+                .findAny()
+                .orElseThrow(() -> new RuntimeException("Subscribers don't found"));
     }
 
     public boolean vipSearch(List<Subscriber> subscribers, String city) {
-        boolean resultVipSearch = subscribers.stream()
+        return subscribers.stream()
                 .anyMatch(subscriber -> subscriber.getCity().equals(city) && subscriber.getVip());
-        System.out.println(resultVipSearch);
-        return resultVipSearch;
     }
 }

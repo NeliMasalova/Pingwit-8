@@ -15,22 +15,21 @@ public class Application {
                 new Subscriber("Robert", "Lewandowski", "104", LocalDate.of(1975, 10, 15), LocalDate.of(2008, 11, 7), false, "Gdansk"),
                 new Subscriber("Teresa", "May", "105", LocalDate.of(2001, 1, 1), LocalDate.of(2022, 6, 7), true, "Berlin"));
 
+        System.out.println("=======task_1====");
         SubscriberFindService subscriberFindService = new SubscriberFindService();
-        subscriberFindService.findAnySubscriber(subscribers, "Warsaw");
-        subscriberFindService.allSubscribersConnectionBeforeDate(subscribers, LocalDate.now());
-        subscriberFindService.vipSearch(subscribers, "Warsaw");
+        System.out.println(subscriberFindService.findAnySubscriber(subscribers, "Warsaw"));
+        System.out.println(subscriberFindService.allSubscribersConnectionBeforeDate(subscribers, LocalDate.now()));
+        System.out.println(subscriberFindService.vipSearch(subscribers, "Warsaw"));
 
-        System.out.println("=======");
+        System.out.println("======task_2=====");
         SubscriberStatisticService subscriberStatisticService = new SubscriberStatisticService();
-        subscriberStatisticService.subscriberStatisticByAge(subscribers);
-        subscriberStatisticService.subscriberStatisticByContractDay(subscribers);
+        System.out.println(subscriberStatisticService.subscriberStatisticByAge(subscribers));
+        System.out.println(subscriberStatisticService.subscriberStatisticByContractDay(subscribers));
 
-        System.out.println("=========task_3.1============");
+        System.out.println("=========task_3============");
         SubscriberGroupingService subscriberGroupingService = new SubscriberGroupingService();
-        subscriberGroupingService.groupingByCity(subscribers);
-
-        System.out.println("======task_3.2=========");
-        subscriberGroupingService.searchNoVip(subscribers);
+        System.out.println(subscriberGroupingService.groupingByCity(subscribers));
+        System.out.println(subscriberGroupingService.searchNoVip(subscribers));
 
     }
 }

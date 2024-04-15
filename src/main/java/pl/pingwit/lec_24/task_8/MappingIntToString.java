@@ -5,22 +5,27 @@ import java.util.function.Function;
 
 public class MappingIntToString {
     public static void main(String[] args) {
-        List<Integer> integers = List.of(1, 18, 94, 1000005, -15, 0, 33);
+        List<Integer> integers = List.of(1, 18, 92, 1000005, 15, 0, 33, 12);
 
-        Function<Integer, String> mappingIntegerToString = number -> {
+        List<String> strings = integers.stream()
+                .map(element -> element.toString())
+                .toList();
+
+        Function<String, String> mappingIntegerToString = number -> {
             String ending = " рублей.";
-            if (number == -1 || number == 1) {
+            if (number.endsWith("1")) {
                 ending = " рубль.";
-            } else if (number == -2 || number == 2) {
+            } else if (number.endsWith("12") || number.endsWith("13") || number.endsWith("14")) {
+                ending = " рублей.";
+            } else if (number.endsWith("2") || number.endsWith("3") || number.endsWith("4")) {
                 ending = " рубля.";
             }
             return number + ending;
         };
 
-        List<String> resultStrings = integers.stream()
+        strings.stream()
                 .map(mappingIntegerToString)
-                .toList();
+                .forEach(System.out::println);
 
-        resultStrings.forEach(System.out::println);
     }
 }

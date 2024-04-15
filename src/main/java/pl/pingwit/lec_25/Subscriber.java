@@ -6,10 +6,10 @@ import java.util.Objects;
 public class Subscriber {
     private String name;
     private String surname;
-    private String contractId; //(номер договора)
+    private String contractId;
     private LocalDate dateOfBirth;
-    private LocalDate contractDate; // (дата заключения контракта)
-    private Boolean isVip; //(пометка, что клиент премиальный)
+    private LocalDate contractDate;
+    private Boolean isVip;
     private String city;
 
     public Subscriber(String name, String surname, String contractId, LocalDate dateOfBirth, LocalDate contractDate, Boolean isVip, String city) {

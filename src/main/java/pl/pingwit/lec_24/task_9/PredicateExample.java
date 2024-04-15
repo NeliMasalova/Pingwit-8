@@ -10,11 +10,14 @@ public class PredicateExample {
 
         List<UserInfo> userInfos = getUserInfos();
 
-        // давай уберем "!"
-        Predicate<UserInfo> excludeNamesStartsWith = userInfo -> userInfo.name().startsWith("S")
-                || userInfo.name().startsWith("P")
-                || userInfo.name().startsWith("A");
+//        Predicate<UserInfo> excludeNamesStartsWith = userInfo -> userInfo.name().startsWith("S")
+//                || userInfo.name().startsWith("P")
+//                || userInfo.name().startsWith("A");
+//        excludeNamesStartsWith.negate();
 
+        Predicate<UserInfo> excludeNamesStartsWith =Predicate.not(userInfo -> userInfo.name().startsWith("S")
+                || userInfo.name().startsWith("P")
+                || userInfo.name().startsWith("A"));
         userInfos.removeIf(excludeNamesStartsWith);
         System.out.println(userInfos);
     }
