@@ -2,10 +2,9 @@ package pl.pingwit.lec_16.task_3_default_value_annotation;
 
 import org.junit.jupiter.api.Test;
 import pl.pingwit.lec_16.CustomerDetails;
-
 import java.time.LocalDate;
-
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class DefaultValueProcessorTest {
     DefaultValueProcessor target = new DefaultValueProcessor();
@@ -42,4 +41,14 @@ class DefaultValueProcessorTest {
         //then
         assertThat(customerDetailsWithNullStrings).isEqualTo(expected);
     }
+
+   /* @Test
+    void shouldThrowExceptionWhenStringIsEmpty(){
+        //given
+        CustomerDetails customerDetailsWithEmptyStrings = new CustomerDetails("", "", "", "", LocalDate.of(1993, 12, 7), 1);
+        //when
+        IllegalAccessException illegalAccessException = assertThrows(IllegalAccessException.class, () -> target.process(customerDetailsWithEmptyStrings));
+        //then
+        assertThat(illegalAccessException.getMessage()).isEqualTo("String is blank");
+    }*/
 }
